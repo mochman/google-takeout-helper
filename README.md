@@ -31,7 +31,7 @@ docker run -d \
   -e RUN_OPTS=<run options here> #optional \
   -v <path to photos>:/photosIn \
   -v <path to photo output>:/photosOut \
-  mochman425/google-photos-helper
+  mochman425/google-takeout-helper
 ```
 
 ### Paramaters
