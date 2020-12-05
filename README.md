@@ -1,11 +1,13 @@
-# Usage
+# Using [Google Photos Takeout Helper](https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper) v1.2.0
 
-1. Get [Google Takeout File(s)](https://takeout.google.com/ "Google Takeouts")
+## Usage
+
+1. Get [Google Takeout File(s)](https://takeout.google.com/ "Google Takeouts").  Only select Google Photos.
 2. Place file(s) into /photosIn  (do not extract, just add the .zip/.tgz files)
 3. Run docker image
 4. Files will be placed in /photosOut
 
-#### Using [Google Photos Takeout Helper](https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper) v1.2.0
+Note:  This container will remove any album folders that aren't named something like "2018-05-08" as [recommended](https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper#how-to-use).
 
 ### docker-compose
 
