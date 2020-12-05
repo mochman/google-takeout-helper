@@ -1,15 +1,17 @@
 FROM python:3.9-alpine
+ARG LOCAL_VERSION
 LABEL maintainer="Luke Moch" \
 			name="google-takeout-helper" \
-			version="1.0.0" \
-			gpth-version="1.2.0"
+			version=$LOCAL_VERSION \
+			gpth-version="v1.2.0"
 
 COPY docker-entrypoint.sh /
 
-RUN pip install -U google-photos-takeout-helper
+RUN apk upgrade --no-cache musl
+RUN pip3 install -U google-photos-takeout-helper
+
+RUN mkdir -m777 /photosIn /photosOut
 
 VOLUME ["/photosIn", "/photosOut"]
-
-RUN chmod 777 /photosIn /photosOut
 
 ENTRYPOINT ["/bin/sh", "/docker-entrypoint.sh"]
