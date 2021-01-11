@@ -21,16 +21,7 @@ else
   exit 0
 fi
 
-eval cd "${INPUTPATH}"
-STARTDIR="$(find . -type d -regex '.*/[0-9].*' | head -1 | sed 's|\(.*\)/.*|\1|')"
-eval cd ${STARTDIR// /\\ }
-
-echo "Removing incorrect folders..."
-find . -type d -regex "./[A-Z].*" -exec rm -r "{}" \; 2>/dev/null
-find . -type d -regex "./[a-z].*" -exec rm -r "{}" \; 2>/dev/null
-echo "Folder cleaning complete"
-
 echo "Running script..."
-echo "yes i did that" | /usr/local/bin/google-photos-takeout-helper -i $INPUTPATH -o /photosOut $RUN_OPTS
+/usr/local/bin/google-photos-takeout-helper -i $INPUTPATH -o /photosOut $RUN_OPTS
 
 exec "$@"

@@ -1,4 +1,4 @@
-# Using [Google Photos Takeout Helper](https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper) v1.2.0
+# Using [Google Photos Takeout Helper](https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper) v2.0.0rc1
 
 ## Usage
 
@@ -6,8 +6,6 @@
 2. Place file(s) into /photosIn  (do not extract, just add the .zip/.tgz files)
 3. Run docker image
 4. Files will be placed in /photosOut
-
-Note:  This container will remove any album folders that aren't named something like "2018-05-08" as [recommended](https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper#how-to-use).
 
 ### docker-compose
 
@@ -50,6 +48,6 @@ docker run -d \
 | Argument | Function |
 | :----: | --- |
 | `--divide-to-dates` | Create folders and subfolders based on the date the photos were taken. |
-| `--keep-duplicates` | Don't remove duplicates. |
-| `--dont-fix` | Don't try to fix Dates. I don't know why would you not want to do that, but ok. |
-| `--dont-copy` | Don't copy files to target folder. I don't know why would you not want to do that, but ok. |
+| `--skip-extras` | EXPERIMENTAL: Skips the extra photos like photos that end in "edited" or "EFFECTS". |
+| `--skip-extras-harder` | EXPERIMENTAL: Skips the extra photos like photos like pic(1). Also includes --skip-extras. |
+| `--albums ALBUMS` | EXPERIMENTAL, MAY NOT WORK FOR EVERYONE: What kind of 'albums solution' you would like: 'json' - written in a json file |
