@@ -1,4 +1,4 @@
-# Using [Google Photos Takeout Helper](https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper) v2.1.0
+# Using [Google Photos Takeout Helper](https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper) v2.1.3
 
 ## Usage
 

@@ -3,7 +3,7 @@ ARG LOCAL_VERSION
 LABEL maintainer="Luke Moch" \
 			name="google-takeout-helper" \
 			version=$LOCAL_VERSION \
-			gpth-version="v2.1.0"
+			gpth-version="v2.1.3"
 
 COPY docker-entrypoint.sh /
 
